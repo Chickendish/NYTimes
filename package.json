@@ -1,0 +1,29 @@
+{
+  "name": "nytimes",
+  "version": "1.0.0",
+  "description": "NYTimes Search app in React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chickendish/NYTimes.git"
+  },
+  "author": "bill donovan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chickendish/NYTimes/issues"
+  },
+  "homepage": "https://github.com/Chickendish/NYTimes#readme",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "webpack": "^3.6.0"
+  }
+}
