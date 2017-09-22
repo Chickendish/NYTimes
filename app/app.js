@@ -3,4 +3,4 @@ var ReactDOM = require('react-dom');
 var Router = require('react-router');
 
 
-ReactDOM.render(<div>Hello World</div>, document.getElementById('app'));
+ReactDOM.render(<Main />, document.getElementById('app'));
