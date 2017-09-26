@@ -26,13 +26,33 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 app.use(express.static("./public"));
 
-//===========================================
-// Listen on server
-//===========================================
+// ==========================================
+//  Routing
+// ==========================================
 
 app.get("/", function(req, res){
 	res.sendFile('./public/index.html');
 });
+
+// ===========================================
+//  Set up the database
+// ===========================================
+
+var link = "mongodb://localhost/nytreact";
+
+mongoose.connect(link);
+var db = mongoose.connection;
+
+db.on('error', function (err) {
+  console.log('Mongoose Error: ', err);
+});
+
+db.once('open', function () {
+  console.log('Mongoose connection successful.');
+});
+// ===========================================
+// Listen on server
+// ===========================================
 
 app.listen(PORT, ()=>
 	console.log("App listening on port: " + PORT));
