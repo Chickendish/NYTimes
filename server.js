@@ -24,9 +24,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
+app.use(express.static("./public"));
+
 //===========================================
 // Listen on server
 //===========================================
+
+app.get("/", function(req, res){
+	res.sendFile('./public/index.html');
+});
 
 app.listen(PORT, ()=>
 	console.log("App listening on port: " + PORT));
